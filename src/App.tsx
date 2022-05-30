@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import MiniSearch from 'minisearch'
 import './App.css'
 
@@ -24,12 +24,16 @@ function App () {
       // TODO: handle error
   })
   const [searchCriteria, setSearchCriteria] = useState('')
+  const [searchResults, setSearchResults] = useState<SearchResult[]>([])
+  useEffect(() => {
+    setSearchResults(index.search(searchCriteria))
+  }, [searchCriteria])
   return (
     <div>
       <input type="text" placeholder="Peanutbutter" value={searchCriteria} onChange={(event) => setSearchCriteria(event.target.value)} />
-      {index && searchCriteria && <div>
+      {searchResults && <div>
         <ul>
-          {index.search(searchCriteria).map((doc: SearchResult) => (<li key={doc.stillPath}>
+          {searchResults.map((doc: SearchResult) => (<li key={doc.stillPath}>
             <img src={`data/${doc.stillPath}`} />
             {doc.html}
           </li>))}
