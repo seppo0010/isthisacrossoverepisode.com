@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/isthisacrossoverepisode.com/static/css/main.31d6cfe0.css",
+    "main.js": "/isthisacrossoverepisode.com/static/js/main.94b5f3cb.js",
+    "static/js/787.905b317c.chunk.js": "/isthisacrossoverepisode.com/static/js/787.905b317c.chunk.js",
+    "index.html": "/isthisacrossoverepisode.com/index.html",
+    "main.94b5f3cb.js.map": "/isthisacrossoverepisode.com/static/js/main.94b5f3cb.js.map",
+    "787.905b317c.chunk.js.map": "/isthisacrossoverepisode.com/static/js/787.905b317c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.94b5f3cb.js"
+  ]
+}
