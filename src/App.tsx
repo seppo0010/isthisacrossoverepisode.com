@@ -50,11 +50,13 @@ function App () {
 
   return (
     <div>
-      <h1>Is this a cross-over episode?</h1>
-      {selectedItem === null && <label>
-        <span id="search">Search</span>
-        <input type="text" placeholder="Peanutbutter" value={searchCriteria} onChange={(event) => setSearchCriteria(event.target.value)} aria-labelby="search" />
-      </label>}
+      <div id="searchTitle">
+        <h1>Is this a cross-over episode?</h1>
+        <label>
+          <span id="search">Search</span>
+          <input type="text" placeholder="Peanutbutter" value={searchCriteria} onChange={(event) => setSearchCriteria(event.target.value)} aria-labelby="search" />
+        </label>
+      </div>
       {/* these should be components, but I don't want to be coding front-end */}
       {ready && searchResults.length > 0 && selectedItem === null && <div>
         <ul aria-description="Search results">

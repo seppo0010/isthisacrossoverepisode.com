@@ -1,3 +1,17 @@
+#searchTitle {
+  display: flex;
+  width: 100%;
+}
+
+#searchTitle h1 {
+  flex-grow: 1;
+}
+
+#searchTitle label {
+  display: flex;
+  align-items: center;
+}
+
 button {
   border: none;
   padding: 0;
