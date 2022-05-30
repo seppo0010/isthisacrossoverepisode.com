@@ -1,0 +1,16 @@
+button {
+  border: none;
+  padding: 0;
+}
+
+ul {
+  display: flex;
+  max-width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+ul, ul li {
+  padding: 0;
+  list-style: none;
+}

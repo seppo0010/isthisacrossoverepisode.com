@@ -6,6 +6,7 @@ const Worker = require('workerize-loader!./search.worker')
 interface SearchResult {
   stillPath: string
   html: string
+  text: string
 }
 
 function App () {
@@ -45,14 +46,22 @@ function App () {
 
   return (
     <div>
-      <input type="text" placeholder="Peanutbutter" value={searchCriteria} onChange={(event) => setSearchCriteria(event.target.value)} />
+      <h1>Is this a cross-over episode?</h1>
+      <label>
+        <span id="search">Search</span>
+        <input type="text" placeholder="Peanutbutter" value={searchCriteria} onChange={(event) => setSearchCriteria(event.target.value)} aria-labelby="search" />
+      </label>
       {ready && searchResults && <div>
-        <ul>
+        <ul aria-description="Search results">
           {searchResults.map((doc: SearchResult) => (<li key={doc.stillPath}>
-            <img src={`data/${doc.stillPath}`} />
-            {doc.html}
+            <button title={doc.text}>
+              <img src={`data/${doc.stillPath}`} alt={doc.text} />
+            </button>
           </li>))}
         </ul>
+      </div>}
+      {(!ready || !searchResults) && <div>
+        Search your favorite BoJack Horseman&apos;s scenes!
       </div>}
     </div>
   )
