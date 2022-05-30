@@ -26,8 +26,10 @@ function App () {
   const [searchCriteria, setSearchCriteria] = useState('')
   const [searchResults, setSearchResults] = useState<SearchResult[]>([])
   useEffect(() => {
-    setSearchResults(index.search(searchCriteria))
-  }, [searchCriteria])
+    if (index) {
+      setSearchResults(index.search(searchCriteria))
+    }
+  }, [index, searchCriteria])
   return (
     <div>
       <input type="text" placeholder="Peanutbutter" value={searchCriteria} onChange={(event) => setSearchCriteria(event.target.value)} />
