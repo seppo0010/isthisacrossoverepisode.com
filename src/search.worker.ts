@@ -10,7 +10,7 @@ const doSearch = () => {
     global.self.postMessage(['setSearchResults', []])
     return
   }
-  global.self.postMessage(['setSearchResults', index.search(criteria).slice(0, 20])
+  global.self.postMessage(['setSearchResults', index.search(criteria).slice(0, 40)])
 }
 
 export async function init () {
@@ -22,6 +22,7 @@ export async function init () {
         fields: ['text'],
         storeFields: ['html', 'season', 'episode', 'stillPath'],
         searchOptions: {
+          combineWith: 'AND',
           prefix: true
         }
       })
