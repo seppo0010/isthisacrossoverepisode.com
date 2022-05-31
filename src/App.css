@@ -29,6 +29,11 @@ ul, ul li {
   list-style: none;
 }
 
+img.thumbnail {
+  width: 180px;
+  height: 101px;
+}
+
 #selectedItem button {
   display: block;
 }

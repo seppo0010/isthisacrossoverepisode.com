@@ -62,7 +62,7 @@ function App () {
         <ul aria-description="Search results">
           {searchResults.map((doc: SearchResult) => (<li key={doc.stillPath}>
             <button title={doc.text} onClick={() => setSelectedItem(doc)}>
-              <img src={`data/${doc.stillPath}`} alt={doc.text} />
+              <img src={`data/${doc.stillPath}`} alt={doc.text} className="thumbnail" />
             </button>
           </li>))}
         </ul>
