@@ -51,7 +51,7 @@ function App () {
   return (
     <div>
       <div id="searchTitle">
-        <h1>Is this a cross-over episode?</h1>
+        <h1>What is this? A cross over episode?</h1>
         <label>
           <span>Search</span>
           <input type="text" placeholder="Peanutbutter" value={searchCriteria} onChange={(event) => setSearchCriteria(event.target.value)} />
