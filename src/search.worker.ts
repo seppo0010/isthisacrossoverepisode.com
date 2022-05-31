@@ -10,8 +10,9 @@ const doSearch = () => {
     global.self.postMessage(['setSearchResults', []])
     return
   }
-  global.self.postMessage(['setSearchResults', index.search(criteria)])
+  global.self.postMessage(['setSearchResults', index.search(criteria).slice(0, 20])
 }
+
 export async function init () {
   fetch('data/index.json')
     .then((res) => res.text())
