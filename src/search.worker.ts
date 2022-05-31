@@ -5,7 +5,8 @@ let criteria = ''
 
 const doSearch = () => {
   if (!index) return
-  if (criteria.split(' ').some((x) => x.length < 3)) {
+  const c = criteria.split(' ').filter((x) => x.length >= 3).join(' ')
+  if (c === '') {
     global.self.postMessage(['setSearchResults', []])
     return
   }
