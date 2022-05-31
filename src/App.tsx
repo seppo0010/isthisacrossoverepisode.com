@@ -53,8 +53,8 @@ function App () {
       <div id="searchTitle">
         <h1>Is this a cross-over episode?</h1>
         <label>
-          <span id="search">Search</span>
-          <input type="text" placeholder="Peanutbutter" value={searchCriteria} onChange={(event) => setSearchCriteria(event.target.value)} aria-labelby="search" />
+          <span>Search</span>
+          <input type="text" placeholder="Peanutbutter" value={searchCriteria} onChange={(event) => setSearchCriteria(event.target.value)} />
         </label>
       </div>
       {/* these should be components, but I don't want to be coding front-end */}
